@@ -12,6 +12,6 @@ publish:
 	git pull
 	dotnet restore src/DotNetLive.BlogsWeb.sln 
 	cd src/DotNetLive.BlogsWeb && npm install && bower install --allow-root && gulp default
-	dotnet publish src/DotNetLive.ForumBlogsWebsWeb/DotNetLive.BlogsWeb.csproj -c "Release" -o /var/dotnetlive/pubsite/dotnetlive.blogs/ 
+	dotnet publish src/DotNetLive.BlogsWeb/DotNetLive.BlogsWeb.csproj -c "Release" -o /var/dotnetlive/pubsite/dotnetlive.blogs/ 
 
 deploy: stop publish start
